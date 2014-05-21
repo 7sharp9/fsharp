@@ -66,6 +66,13 @@ TARGET = portable-windows8+net45
 PCLPATH = .NETCore
 endif
 
+ifeq (x-$(TargetFramework)-$(FSharpCoreBackVersion),x-portable-net45+wp80+win8-)
+VERSION = 4.5.8.0
+TARGET = portable-windows8+net45+win8Phone
+PCLPATH = .NETPortable
+endif
+
+
 # Version number mappings for various back versions of FSharp.Core (F# 3.0 versions of FSharp.Core)
 
 ifeq (x-$(TargetFramework)-$(FSharpCoreBackVersion),x-net20-3.0)
@@ -87,6 +94,14 @@ TARGET = portable-net45+sl5+win8
 PCLPATH = .NETPortable
 outsuffix = fsharp30/$(TargetFramework)
 endif
+
+ifeq (x-$(TargetFramework)-$(FSharpCoreBackVersion),x-portable-net45+wp80+win8-3.0)
+VERSION = 4.5.8.3
+TARGET = portable-net45+win8+win8Phone
+PCLPATH = .NETPortable
+outsuffix = fsharp30/$(TargetFramework)
+endif
+
 
 
 DELAY_SIGN_TOKEN = b03f5f7f11d50a3a

@@ -71,6 +71,14 @@ if test -e $MONOLIBDIR/mono/xbuild-frameworks/.NETPortable/v4.0/Profile/Profile4
 else
    PCLENABLED=no
 fi
+
+if test -e $MONOLIBDIR/mono/xbuild-frameworks/.NETPortable/v4.5/Profile/Profile78/mscorlib.dll; then
+   PCLENABLED=yes
+else
+   PCLENABLED=no
+fi
+
+
 AC_MSG_NOTICE(PCL Reference Assemblies found: $PCLENABLED)
 
 AC_SUBST(PCLENABLED)
