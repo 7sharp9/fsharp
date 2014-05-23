@@ -210,7 +210,7 @@ Some other NuGET monikers to support in the future, see http://docs.nuget.org/do
     <OtherFlags>$(OtherFlags) --targetprofile:netcore</OtherFlags>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)'=='portable-windows8+net45'">
+  <ItemGroup Condition="'$(TargetFramework)'=='portable-windows8+net45' OR '$(TargetFramework)'=='portable-net45+wp80+win8'">
     <Reference Include="Microsoft.CSharp.dll" />
     <Reference Include="Microsoft.VisualBasic.dll" />
     <Reference Include="mscorlib.dll" />
