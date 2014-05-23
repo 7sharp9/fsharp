@@ -69,7 +69,7 @@ endif
 ifeq (x-$(TargetFramework)-$(FSharpCoreBackVersion),x-portable-net45+wp80+win8-)
 VERSION = 4.5.8.0
 TARGET = portable-net45+wp80+win8
-PCLPATH = .NETPortable
+PCLPATH = .NETCore
 endif
 
 
@@ -98,7 +98,7 @@ endif
 ifeq (x-$(TargetFramework)-$(FSharpCoreBackVersion),x-portable-net45+wp80+win8-3.0)
 VERSION = 4.5.8.3
 TARGET = portable-net45+wp80+win8
-PCLPATH = .NETPortable
+PCLPATH = .NETCore
 outsuffix = fsharp30/$(TargetFramework)
 endif
 
