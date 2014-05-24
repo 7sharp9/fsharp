@@ -201,13 +201,13 @@
     </CustomAdditionalCompileInputs>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="mscorlib" Condition="'$(TargetFramework)' != 'wp7' AND '$(TargetFramework)' != 'portable-windows8+net45' AND '$(TargetFramework)' != 'portable-net45+wp80+win8' " />
-    <Reference Include="System.Runtime" Condition="'$(TargetFramework)' == 'portable-windows8+net45' OR '$(TargetFramework)' == 'portable-net45+wp80+win8'" />
+    <Reference Include="mscorlib" Condition="'$(TargetFramework)' != 'wp7' AND '$(TargetFramework)' != 'portable-windows8+net45'" />
+    <Reference Include="System.Runtime" Condition="'$(TargetFramework)' == 'portable-windows8+net45'" />
     <Reference Include="System" />
     <Reference Include="System.Numerics" Condition="'$(TargetFramework)' == 'net40'" />
-    <Reference Include="System.Net" Condition="'$(TargetFramework)' == 'sl5' OR '$(TargetFramework)' == 'sl5-compiler' OR '$(TargetFramework)' == 'XNA\5.0' OR '$(TargetFramework)' == 'wp7' OR '$(TargetFramework)' == 'portable-net45+sl5+win8' OR '$(TargetFramework)' == 'net40-xna40-xbox360' OR '$(TargetFramework)' == 'portable-windows8+net45' OR '$(TargetFramework)' == 'portable-net45+wp80+win8'" />
+    <Reference Include="System.Net" Condition="'$(TargetFramework)' == 'sl5' OR '$(TargetFramework)' == 'sl5-compiler' OR '$(TargetFramework)' == 'XNA\5.0' OR '$(TargetFramework)' == 'wp7' OR '$(TargetFramework)' == 'portable-net45+sl5+win8' OR '$(TargetFramework)' == 'net40-xna40-xbox360' OR '$(TargetFramework)' == 'portable-windows8+net45'" />
     <Reference Include="System.Observable" Condition="'$(TargetFramework)' == 'wp7' " />
-    <Reference Include="System.Core" Condition="'$(TargetFramework)' == 'sl5' OR '$(TargetFramework)' == 'sl5-compiler' OR '$(TargetFramework)' == 'XNA\5.0' OR '$(TargetFramework)' == 'wp7' OR '$(TargetFramework)' == 'portable-net45+sl5+win8' OR '$(TargetFramework)' == 'net40-xna40-xbox360' OR '$(TargetFramework)' == 'portable-windows8+net45' OR '$(TargetFramework)' == 'portable-net45+wp80+win8'" />
+    <Reference Include="System.Core" Condition="'$(TargetFramework)' == 'sl5' OR '$(TargetFramework)' == 'sl5-compiler' OR '$(TargetFramework)' == 'XNA\5.0' OR '$(TargetFramework)' == 'wp7' OR '$(TargetFramework)' == 'portable-net45+sl5+win8' OR '$(TargetFramework)' == 'net40-xna40-xbox360' OR '$(TargetFramework)' == 'portable-windows8+net45'" />
   </ItemGroup>
   <!-- References -->
   <Import Project="$(FSharpSourcesRoot)\FSharpSource.targets" />
