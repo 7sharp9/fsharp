@@ -186,10 +186,10 @@ plus scripts
 ### Integrating changes from 'visualfsharp'
 
 To integrate latest changes from https://git01.codeplex.com/visualfsharp, use
-
+```
 git remote add visualfsharp https://git01.codeplex.com/visualfsharp
 git pull visualfsharp master
-
+```
 
 ### Continuous Integration Build 
 
@@ -240,4 +240,51 @@ sudo apt-get install dos2unix autoconf
 make
 sudo make install
 ```
+
+### FSharp.Core Deployed with Nuget
+FSharp.Core is also available via Nuget.  
+
+*   [FSharp.Core for F# 3.0+ Microsoft Signed](https://www.nuget.org/packages/FSharp.Core.4.3.0.0.Microsoft.Signed)
+*   [FSharp.Core for F# 3.1+ Microsoft Signed](https://www.nuget.org/packages/FSharp.Core.Microsoft.Signed)
+*   [FSharp.Core for F# 3.1+ with MonoAndroid and MonoTouch](https://www.nuget.org/packages/FSharp.Core.Mono.Signed)
+
+
+The folder FSharp.Core.Nuget contains the nuget package scripts for the deployment of FSharp.Core.  
+
+#### FSharp.Core for F# 3.0+ Microsoft Signed
+NuGet Package Id: `FSharp.Core.4.3.0.0.Microsoft.Signed`  
+
+Contains the following versions Microsoft signed versions: 
+*   .Net 2.0
+*   .Net 4.0
+*   .Net 4.5
+*   Profile 47
+
+#### FSharp.Core for F# 3.1+ Microsoft Signed
+NuGet Package Id: `FSharp.Core.Microsoft.Signed`  
+
+Contains the following versions Microsoft signed versions: 
+*   .Net 4.0
+*   .Net 4.5
+*   Profile 7
+*   Profile 47
+*   Profile 78
+*   Profile 259
+
+#### FSharp.Core for F# 3.1+ with MonoAndroid and MonoTouch
+NuGet Package Id: `FSharp.Core.Mono.Signed`  
+
+Contains the following versions Microsoft signed versions: 
+*   .Net 4.0
+*   .Net 4.5
+*   Profile 7
+*   Profile 47
+*   Profile 78
+*   Profile 259
+
+And the following are delay signed with the Mono key:
+*   MonoAndroid
+*   MonoTouch
+
+The FSharp.Core.Mono.Signed package is normally deployed with a version matching the current tag of the open source build, the Microsoft signed versions use a version which matches the current Microsoft signed versions of FSharp core.
 
