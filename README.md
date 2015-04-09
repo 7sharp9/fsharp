@@ -6,7 +6,7 @@ and core tools for use across multiple platforms.
 ### Contributing to the F# Compiler, Core Library and Tools
 
 Most contributions to the F# compiler/library/tools go first via the  
-repository at http://visualfsharp.codeplex.com.  This ensures that the main
+repository at https://github.com/Microsoft/visualfsharp.  This ensures that the main
 packaging of F# on Windows (the Visual F# Tools) also includes any contributions that are made, and
 ensures that the versions do not diverge.
 
@@ -19,8 +19,8 @@ available from this repo. At the moment the process is:
 
 1. Fork this repo.
 2. Build and test using the subset of tests available in this repo. If you like, submit a PR to this repo in order to trigger an automatic Travis run, or set up a Travis hook in your fork.
-3. Seek initial review by posting an issue in this repository or http://visualfsharp.codeplex.com. Make it clear you are working on Linux or OSX.
-4. Cherry-pick your changes into a pull request for http://visualfsharp.codeplex.com and submit for final testing and clearance.
+3. Seek initial review by posting an issue in this repository or https://github.com/Microsoft/visualfsharp. Make it clear you are working on Linux or OSX.
+4. Cherry-pick your changes into a pull request for https://github.com/Microsoft/visualfsharp and submit for final testing and clearance.
 5. The change will then be merged into this repo at a later point.
 
 If you don't have access to Windows in order to run final tests at step 4. If you need help, email fsharp-opensource@googlegroups.com and ask to make a final test run on Windows.
@@ -179,9 +179,9 @@ plus scripts
 
 ### Integrating changes from 'visualfsharp'
 
-To integrate latest changes from https://git01.codeplex.com/visualfsharp, use
+To integrate latest changes from https://github.com/Microsoft/visualfsharp, use
 ```
-git remote add visualfsharp https://git01.codeplex.com/visualfsharp
+git remote add visualfsharp https://github.com/Microsoft/visualfsharp
 git pull visualfsharp master
 ```
 
@@ -211,7 +211,7 @@ cd tests/fsharp/core
 
 ### Windows
 
-See the http://visualfsharp.codeplex.com for instructions for how to test on Windows. Use that repository
+See the [TESTGUIDE.md](https://github.com/Microsoft/visualfsharp/blob/master/TESTGUIDE.md) for instructions for how to test on Windows. Use that repository
 to develop and test on Windows.
 
 ## History 
@@ -235,50 +235,10 @@ make
 sudo make install
 ```
 
-### FSharp.Core Deployed with Nuget
-FSharp.Core is also available via Nuget.  
+### FSharp.Core via NuGet
+FSharp.Core is also available via NuGet. Packages are available for F# 3.0 and F# 3.1
 
-*   [FSharp.Core for F# 3.0+ Microsoft Signed](https://www.nuget.org/packages/FSharp.Core.4.3.0.0.Microsoft.Signed)
-*   [FSharp.Core for F# 3.1+ Microsoft Signed](https://www.nuget.org/packages/FSharp.Core.Microsoft.Signed)
-*   [FSharp.Core for F# 3.1+ with MonoAndroid and MonoTouch](https://www.nuget.org/packages/FSharp.Core.Mono.Signed)
+[http://www.nuget.org/packages/FSharp.Core](http://www.nuget.org/packages/FSharp.Core)
 
-
-The folder FSharp.Core.Nuget contains the nuget package scripts for the deployment of FSharp.Core.  
-
-#### FSharp.Core for F# 3.0+ Microsoft Signed
-NuGet Package Id: `FSharp.Core.4.3.0.0.Microsoft.Signed`  
-
-Contains the following versions Microsoft signed versions: 
-*   .Net 2.0
-*   .Net 4.0
-*   .Net 4.5
-*   Profile 47
-
-#### FSharp.Core for F# 3.1+ Microsoft Signed
-NuGet Package Id: `FSharp.Core.Microsoft.Signed`  
-
-Contains the following versions Microsoft signed versions: 
-*   .Net 4.0
-*   .Net 4.5
-*   Profile 7
-*   Profile 47
-*   Profile 78
-*   Profile 259
-
-#### FSharp.Core for F# 3.1+ with MonoAndroid and MonoTouch
-NuGet Package Id: `FSharp.Core.Mono.Signed`  
-
-Contains the following versions Microsoft signed versions: 
-*   .Net 4.0
-*   .Net 4.5
-*   Profile 7
-*   Profile 47
-*   Profile 78
-*   Profile 259
-
-And the following are delay signed with the Mono key:
-*   MonoAndroid
-*   MonoTouch
-
-The FSharp.Core.Mono.Signed package is normally deployed with a version matching the current tag of the open source build, the Microsoft signed versions use a version which matches the current Microsoft signed versions of FSharp core.
+The packages include all of the FSharp.Core redistributables from Visual F#. In addition, they include assemblies for MonoAndroid and MonoTouch built from this repository.
 
