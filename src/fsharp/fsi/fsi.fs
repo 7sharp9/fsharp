@@ -831,7 +831,7 @@ type internal FsiDynamicCompiler
         errorLogger.AbortOnError();
             
         let fragName = textOfLid prefixPath 
-        let codegenResults = GenerateIlxCode (IlReflectBackend, isInteractiveItExpr, runningOnMono, tcConfig, topCustomAttrs, optimizedImpls, fragName, true, ilxGenerator)
+        let codegenResults = GenerateIlxCode (IlReflectBackend, isInteractiveItExpr, runningOnMono, tcConfig, topCustomAttrs, optimizedImpls, fragName, true, ilxGenerator, [])
         errorLogger.AbortOnError();
 
         // Each input is like a small separately compiled extension to a single source file. 
