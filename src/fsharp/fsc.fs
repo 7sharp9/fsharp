@@ -1615,7 +1615,7 @@ module StaticLinker =
             Morphs.disablemorphCustomAttributeData()
 #else
             let providerGeneratedILModules = []
-            let generatedILTypeDefs = []
+            let generatedILTypeDefs = [] : (ILTypeRef * ILTypeDef) list
 #endif
             generatedILTypeDefs, (fun ilxMainModule  ->
               ReportTime tcConfig "Find assembly references";
@@ -1903,10 +1903,7 @@ let main2b(Args(tcConfig: TcConfig, tcImports, tcGlobals, errorLogger, generated
     // so that make sure the compiler only emits "serializable" bit into IL metadata when it is available.
     // Note that SerializableAttribute may be relocated in the future but now resides in mscorlib.
     let netFxHasSerializableAttribute = tcImports.SystemRuntimeContainsType "System.SerializableAttribute"
-    let codegenResults = 
-        match dynamicAssemblyCreator with
-        | None -> GenerateIlxCode (IlWriteBackend, false, false, tcConfig, topAttrs, optimizedImpls, generatedCcu.AssemblyName, netFxHasSerializableAttribute, ilxGenerator, providedTypes)
-        | Some _ -> GenerateIlxCode (IlReflectBackend, true, false, tcConfig, topAttrs, optimizedImpls, generatedCcu.AssemblyName, netFxHasSerializableAttribute, ilxGenerator, providedTypes)
+    let codegenResults = GenerateIlxCode (IlWriteBackend, false, false, tcConfig, topAttrs, optimizedImpls, generatedCcu.AssemblyName, netFxHasSerializableAttribute, ilxGenerator, providedTypes)
 
     let casApplied = new Dictionary<Stamp,bool>()
     let securityAttrs,topAssemblyAttrs = topAttrs.assemblyAttrs |> List.partition (fun a -> TypeChecker.IsSecurityAttribute tcGlobals (tcImports.GetImportMap()) casApplied a rangeStartup)
